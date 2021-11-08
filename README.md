@@ -1,9 +1,7 @@
-<center><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--FUjuPIs8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/452qob0efqpz249wrvnm.png" alt="restLogo" width="85" height="85">
-
-<img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1-1174935.png" alt="nodeLogo" width="85" height="85">
-
-<img src="https://ps.w.org/jwt-auth/assets/icon-256x256.png?rev=2298869" alt="css3Logo" width="85" height="85">
-</center><br>
+<p align="center">
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--FUjuPIs8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/452qob0efqpz249wrvnm.png" alt="restLogo" width="85" height="85"><img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1-1174935.png" alt="nodeLogo" width="85" height="85"><img src="https://ps.w.org/jwt-auth/assets/icon-256x256.png?rev=2298869" alt="css3Logo" width="85" height="85">
+</p>
+<br>
 
 # API REST - Equipe 31SI | IAE, Bora? (versão 1.0)
 Projeto 3º período da turma de Sistemas para Internet, FICR 2021.2
