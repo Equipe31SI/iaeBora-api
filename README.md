@@ -13,7 +13,7 @@ Projeto 3º período da turma de Sistemas para Internet, FICR 2021.2
 
 
 ## Deploy da Aplicação com Heroku:
-
+https://iae-bora.herokuapp.com/
 
 ## Para rodar o projeto
 - Clone esse repositório
@@ -100,6 +100,43 @@ Resposta [400] quando o usuário administrador cria uma senha com menos de 8 car
 }
 ~~~
 
+**GET:** /admin
+
+Lista todos os usuários administradores.
+
+Resposta [200]:
+
+~~~Javascript
+[
+    {
+        "_id": "object ID",
+        "name": "string",
+        "email": "string",
+        "password": "string"
+    }
+]
+~~~
+
+**DELETE:** /:id
+
+Deletar um administrador a partir do seu ID. É necessário autorização com token no padrão: Bearer Token.
+
+Resposta [200]:
+
+~~~Javascript
+{
+    "message": "Administrador deletado com sucesso."
+}
+~~~
+
+Resposta [401]:
+
+~~~Javascript
+{
+    "error": "Token não fornecido."
+}
+~~~
+
 ### Login
 Fazer login na API para gerar o JSON Web Token que será enviado em todas as requisições protegidas que apenas o usuário administrador terá acesso.
 
@@ -139,162 +176,6 @@ Resposta [401]:
 ~~~Javascript
 {
     "error": "Senha não corresponde."
-}
-~~~
-
-### Usuários
-**GET:** /users
-
-Lista todos os usuários. É necessário autorização com token no padrão: Bearer Token.
-
-Resposta [200]:
-
-~~~Javascript
-[
-    {
-        "_id": "object ID",
-        "name": "string",
-        "email": "string",
-        "password": "string",
-        "cpf": "string",
-        "phone": "string",
-    }
-]
-~~~
-
-Resposta [401]:
-
-~~~Javascript
-{
-    "error": "Token não fornecido."
-}
-~~~
-
-**POST:** /register
-
-Criar novo usuário.
-
-Body necessário:
-
-~~~Javascript
-{
-    "name": "string",
-    "email": "string",
-    "password": "string",
-    "cpf": "string",
-    "phone": "string"
-}
-~~~
-
-Resposta [200]:
-
-~~~Javascript
-{
-    "_id": "object ID",
-    "name": "string",
-    "email": "string",
-    "password": "string",
-    "cpf": "string",
-    "phone": "string",
-}
-~~~
-
-Resposta [400] quando o usuário insere o e-mail igual a um já cadastrado:
-
-~~~Javascript
-{
-    "error": [
-        "Já existe uma conta com esse e-mail."
-    ]
-}
-~~~
-
-Resposta [400] quando o usuário cria uma senha com menos de 8 caracteres:
-
-~~~Javascript
-{
-    "errors": [
-        "A senha precisa ter no mínimo 8 caracteres."
-    ]
-}
-~~~
-
-**GET:** /users/{id}
-
-Visualizar usuário por ID.
-
-Resposta [200]:
-
-Usuário com o ID informado.
-
-~~~Javascript
-{
-    "_id": "object ID",
-    "name": "string",
-    "email": "string",
-    "password": "string",
-    "cpf": "string",
-    "phone": "string",
-}
-~~~
-
-Resposta [400]:
-
-Quando o ID informado está incorreto.
-
-~~~Javascript
-{
-    "message": "O ID especificado não é válido."
-}
-~~~
-
-**PATCH:** /phone/{id}
-
-Edita o telefone do usuário com o ID indicado.
-
-Body necessário:
-
-~~~Javascript
-{
-    "phone":"string"
-}
-~~~
-
-Resposta [200]:
-
-~~~Javascript
-{
-    "message": "O telefone do usuário de id: {id} foi atualizado com sucesso."
-}
-~~~
-
-Resposta [400]:
-
-Quando o ID informado está incorreto.
-
-~~~Javascript
-{
-    "message": "O ID especificado não é válido."
-}
-~~~
-
-**DELETE:** /:id
-
-Deletar um usuário a partir do seu ID. É necessário autorização com token no padrão: Bearer Token.
-
-Resposta [200]:
-
-~~~Javascript
-{
-    "message": "Usuário deletado com sucesso."
-}
-~~~
-
-Resposta [401]:
-
-~~~Javascript
-{
-    "error": "Token não fornecido."
 }
 ~~~
 
@@ -464,26 +345,6 @@ Resposta [200]:
 ~~~Javascript
 {
     "message": "Evento deletado com sucesso."
-}
-~~~
-
-Resposta [401]:
-
-~~~Javascript
-{
-    "error": "Token não fornecido."
-}
-~~~
-
-**DELETE:** users/{id}
-
-Deletar um usuário a partir do seu ID. É necessário autorização com token no padrão: Bearer Token.
-
-Resposta [200]:
-
-~~~Javascript
-{
-    "message": "Usuário deletado com sucesso."
 }
 ~~~
 
