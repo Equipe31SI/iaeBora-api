@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "863956ab-0345-4b97-9fa9-e1e2a300a4c9",
+		"name": "IAE, bora? - Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Apresentação da API OK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}",
+					"host": [
+						"{{api_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro de Administrador OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Irla Andrade\",\r\n    \"email\": \"irla@gmail.com\",\r\n    \"password\": \"teste1250\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/admin/register",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Admin- Gerar Token OK",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"irla@gmail.com\",\r\n    \"password\": \"teste1250\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/login/admin",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"login",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro de Eventos - Precisa de Token OK",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2IxNzFlYzM1NGU1MTkzODQ1NmVmYiIsImlhdCI6MTYzNTQ1NjgyOCwiZXhwIjoxNjM3MTg0ODI4fQ.ZDOGd1BExqv2vaU8wfNYrYG9iWWnJIrY7CbiYkbjPpM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Campus Party 2022\",\r\n    \"date\": \"10/05/2022\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\",\r\n    \"hour\": \"15h\",\r\n    \"local\": {\r\n        \"address\": \"Cais do Apolo, 100\",\r\n        \"district\": \"Recife\",\r\n        \"city\": \"Recife\",\r\n        \"state\": \"PE\",\r\n        \"postcode\": \"22222-222\"\r\n    },\r\n    \"price\": \"65,00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/events/register",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"events",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visualizar Administradores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZDJkMWU5NmVmZjMyMDcyNDdlYmI4ZCIsImlhdCI6MTYwNzY1MjUwNSwiZXhwIjoxNjA5MzgwNTA1fQ.ENFkI6tyEwH1FOAy6Ls4KIKFrO473ZiZMAXYqW9T0sw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}admin",
+					"host": [
+						"{{api_url}}admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visualizar Eventos OK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}events",
+					"host": [
+						"{{api_url}}events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visualizar evento pelo título OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}events/title?title=Campus Party 2022",
+					"host": [
+						"{{api_url}}events"
+					],
+					"path": [
+						"title"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Campus Party 2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visualizar Evento por ID OK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}events/6184882f319d5c133adbd48a",
+					"host": [
+						"{{api_url}}events"
+					],
+					"path": [
+						"6184882f319d5c133adbd48a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Administrador - Precisa do Token OK",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZDEyZDcwMzhjNTVjMGVmODc1ZWIxYyIsImlhdCI6MTYwNzU0NTAxMiwiZXhwIjoxNjA5MjczMDEyfQ.A0M2frE-XbKY49uE3WUXHLVCJY3FLs9Gqz0gHJJsNrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/admin/5fd132d33405e54d24aae899",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"admin",
+						"5fd132d33405e54d24aae899"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Evento - Precisa do Token OK",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZDEyZDcwMzhjNTVjMGVmODc1ZWIxYyIsImlhdCI6MTYwNzU0NTAxMiwiZXhwIjoxNjA5MjczMDEyfQ.A0M2frE-XbKY49uE3WUXHLVCJY3FLs9Gqz0gHJJsNrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/events/5fd13b983405e54d24aae8b1",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"events",
+						"5fd13b983405e54d24aae8b1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
