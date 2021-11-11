@@ -4,13 +4,12 @@
 <br>
 
 # API REST - Equipe 31SI | IAE, Bora? (versão 1.0)
-Projeto 3º período da turma de Sistemas para Internet, FICR 2021.2
 
 ## Sobre o Projeto
-
+Projeto dos 3º e 4º períodos das turmas de Sistemas para Internet, FICR 2021.2
 
 ## Objetivo
-
+Oferecer um produto digital que canalize de forma rápida, fácil e em qualquer momento do dia, a ocorrência dos eventos culturais próximos que sejam realizados na cidade do Recife. Assim, os usuários serão informados dos atos, celebrações e festejos da cidade, sem necessariamente estarem conectados em tempo integral aos veículos de comunicação. 
 
 ## Deploy da Aplicação com Heroku:
 https://iae-bora.herokuapp.com/
@@ -69,14 +68,11 @@ Body necessário:
 }
 ~~~
 
-Resposta [200]:
+Resposta [201]:
 
 ~~~Javascript
 {
-    "_id": "object ID",
-    "name": "string",
-    "email": "string",
-    "password": "string"
+    Usuário criado com sucesso.
 }
 ~~~
 
@@ -391,7 +387,7 @@ Feito com ❤️ pela Equipe 31 👋🏽 Entre em contato:
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/irlaandrade/"><img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/64447281?s=460&u=6a22a8671f8940a5b037a355288ba6f89f068435&v=4" width="100px;" alt=""/><br /><sub><b>Irla Andrade</b></sub></a><br /></td>
     <td align="center"><a href="https://www.linkedin.com/in/gedsonmonteiro/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/72584422?v=4" width="100px;" alt=""/><br /><sub><b>Gedson Monteiro</b></sub></a><br /></td>
-    <td align="center"><a href="https://www.linkedin.com/in/melissa-assis-656b021b4/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b>Melissa Assis</b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/melissa-assis-656b021b4/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71049513?v=4" width="100px;" alt=""/><br /><sub><b>Melissa Assis</b></sub></a><br /></td>
     <td align="center"><a href="https://www.linkedin.com/in/italo-ramos-07b8a2203/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b>Italo Ramos</b></sub></a><br /></td>
     <td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/91993348?v=4" width="100px;" alt=""/><br /><sub><b>Gleyson Lacerda</b></sub></a><br /></td>
     <td align="center"><a href="https://www.linkedin.com/in/rayssa-cunha-170a1215b/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/66392257?v=4" width="100px;" alt=""/><br /><sub><b>Rayssa Cunha</b></sub></a><br /></td>
