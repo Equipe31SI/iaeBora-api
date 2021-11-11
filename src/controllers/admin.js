@@ -23,7 +23,7 @@ exports.createAdmin = async (req, res, next) => {
       admin.password = passwordHashed
 
       admin.save()
-        .then((admin) => res.status(200).json(admin))
+        .then(res.status(201).json({ message: `Usuário criado com sucesso.` }))
         .catch(err => next(err));
     })
     .catch((err) => {
